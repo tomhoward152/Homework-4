@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- <script src="script.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<section id="test">
+        <h1 id="results"></h1>
+        <main id="restart">
+            <button type="button" class="btn btn-primary" id="restartbtn">Click here to restart</button>
+</section>
+
+<section id="question1">
+    <h1 id="q1">Which HTML element contains our JavaScript?</h1>
+
+    <main id="button1a">
+        <button type="button" class="btn btn-primary" id="button1">script</button>
+    </main>
+    <main id="button2a">
+        <button type="button" class="btn btn-primary" id="button2">js</button>
+    </main>
+    <main id="button3a">
+        <button type="button" class="btn btn-primary" id="button3">scripting</button>
+    </main>
+    <main id="button4a">
+        <button type="button" class="btn btn-primary" id="button4">javascript</button>
+    </main>
+</section>
+
+<section id="question2" style="display: none;">
+    <h1 id="q2">What is the purpose of JavaScript?</h1>
+
+    <main id="button1b">
+        <button type="button" class="btn btn-primary" id="button1">JS is the content on the page.</button>
+    </main>
+    <main id="button2b">
+        <button type="button" class="btn btn-primary" id="button2">JS controls how the page looks.</button>
+    </main>
+    <main id="button3b">
+        <button type="button" class="btn btn-primary" id="button3">JS controls what the page does.</button>
+    </main>
+    <main id="button4b">
+        <button type="button" class="btn btn-primary" id="button4">None of the above</button>
+    </main>
+</section>
+
+<section id="question3" style="display: none;">
+    <section id="question3" >
+    <h1 id="q3">Which character separates items in an array?</h1>
+
+    <main id="button1c">
+        <button type="button" class="btn btn-primary" id="button1">$</button>
+    </main>
+    <main id="button2c">
+        <button type="button" class="btn btn-primary" id="button2">;</button>
+    </main>
+    <main id="button3c">
+        <button type="button" class="btn btn-primary" id="button3">"</button>
+    </main>
+    <main id="button4c">
+        <button type="button" class="btn btn-primary" id="button4">,</button>
+    </main>  
+</section>
+
+
+
+
+
+</body>
+<script>
+    alert("This is a quiz covering JavaScript. The timer will start when you click ok.")
+
+var total = 0
+var q2 = function second() {
+    $("#question1").hide();
+    $("#question2").show();
+    $("#question3").hide();
+    total++;
+    console.log(total);
+   }
+var q2a = function second() {
+    $("#question1").hide();
+    $("#question2").show();
+    $("#question3").hide();
+   }
+
+ $("#button1a").click(q2);
+ $("#button2a").click(q2a);
+ $("#button3a").click(q2a);
+ $("#button4a").click(q2a);
+ 
+ var q3 = function third() {
+    $("#question1").hide();
+    $("#question2").hide();
+    $("#question3").show();
+    total++;
+    console.log(total);
+   }
+
+   var q3a = function third() {
+    $("#question1").hide();
+    $("#question2").hide();
+    $("#question3").show();
+      }
+
+ $("#button3b").click(q3)
+ $("#button1b").click(q3a)
+ $("#button2b").click(q3a)
+ $("#button4b").click(q3a)
+
+var end = function final() {
+    $("#question1").hide();
+    $("#question2").hide();
+    $("#question3").hide();
+    total++;
+    console.log(total);
+    $("#test").show();
+    $("#results").text("You correctly answered " + total + " questions.");
+    
+}
+
+var enda = function final() {
+    $("#question1").hide();
+    $("#question2").hide();
+    $("#question3").hide();
+    $("#test").show();
+    $("#results").text("You correctly answered " + total + " question(s).");
+    
+    
+}
+
+ $("#button4c").click(end);
+ $("#button1c").click(enda);
+ $("#button2c").click(enda);
+ $("#button3c").click(enda);
+
+
+
+//  $("#restartbtn").click(location.reload());
+$("#restartbtn").click(function() {
+    location.reload();
+});
+</script>
+
+</html>
